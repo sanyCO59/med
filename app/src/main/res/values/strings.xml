@@ -9,6 +9,7 @@
     <string name="t7">Вы быстро узнаете о результатах</string>
     <string name="t8">Наши врачи всегда наблюдают за вашими показателями здоровья</string>
     <string-array name="pol">
+
         <item>Мужской</item>
         <item>Женский</item>
     </string-array>
