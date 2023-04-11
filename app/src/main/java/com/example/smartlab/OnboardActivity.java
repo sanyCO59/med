@@ -7,7 +7,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.FrameLayout;
 import android.widget.HorizontalScrollView;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 public class OnboardActivity extends AppCompatActivity {
@@ -26,23 +25,23 @@ public class OnboardActivity extends AppCompatActivity {
         text1 = findViewById(R.id.text_1);
         text2 = findViewById(R.id.text_2);
         text3 = findViewById(R.id.text_3);
-        Circles(1);
+        circles(1);
         scroll.setOnScrollChangeListener(new View.OnScrollChangeListener() {
             @Override
             public void onScrollChange(View view, int i, int i1, int i2, int i3) {//проверка положения HorizontalScrollView
                 int position = (int) scroll.getScrollX();
                 if (position <= 0) {// минимальное значение HorizontalScrollView
-                    Circles(1);
+                    circles(1);
                 } else if (position >= 2000) {// максимальное значение HorizontalScrollView
-                    Circles(3);
+                    circles(3);
                 } else {// промежуточное значение HorizontalScrollView
-                    Circles(2);
+                    circles(2);
                 }
             }
         });
     }
 
-    public void Circles(int i) {//метод замены текста при изменении положения HorizontalScrollView
+    public void circles(int i) {//метод замены текста при изменении положения HorizontalScrollView
         img1.setBackgroundResource(R.drawable.ellipse_0);
         img2.setBackgroundResource(R.drawable.ellipse_0);
         img3.setBackgroundResource(R.drawable.ellipse_0);
