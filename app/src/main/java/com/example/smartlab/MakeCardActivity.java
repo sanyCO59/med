@@ -35,7 +35,7 @@ public class MakeCardActivity extends AppCompatActivity {
             }
 
             @Override
-            public void afterTextChanged(Editable editable) {
+            public void afterTextChanged(Editable editable) {//проверка поля на пустоту 11.04.2023 Лазарев А.В.
                 if (text1.length() > 0) {
                     unlock(true);
                 } else {
@@ -111,10 +111,10 @@ public class MakeCardActivity extends AppCompatActivity {
 
     public void skip(View view) {
         Intent intent = new Intent(MakeCardActivity.this, AnalizActivity.class);
-        startActivity(intent);
+        startActivity(intent);// переход к классу главной страницы 11.04.2023 Лазарев А.В.
     }
 
-    public void unlock(boolean counter) {
+    public void unlock(boolean counter) {//общая проверка полей на пустоту 11.04.2023 Лазарев А.В.
         if (counter) {
             count++;
             if (count == 4) {

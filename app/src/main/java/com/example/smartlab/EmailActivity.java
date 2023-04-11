@@ -36,16 +36,16 @@ public class EmailActivity extends AppCompatActivity {
             }
 
             @Override
-            public void afterTextChanged(Editable editable) {
+            public void afterTextChanged(Editable editable) {//проверка полей на пустоту 11.04.2023 Лазарев А.В.
                 if (inp0.length() != 0 & inp1.length() != 0 & inp2.length() != 0 & inp3.length() != 0) {
                     Intent intent = new Intent(EmailActivity.this, PasswordActivity.class);
-                    startActivity(intent);
+                    startActivity(intent);//переход к классу создания пароля 11.04.2023 Лазарев А.В.
                 }
 
             }
         });
 
-           new CountDownTimer(60000, 1000) {
+           new CountDownTimer(60000, 1000) {//таймер на 60 секунд с шагом в 1 секунду 11.04.2023 Лазарев А.В.
                @Override
                public void onTick(long l) {
                    String text = "Отправить код повторно можно будет через " + l/1000 + " секунд";
@@ -61,6 +61,6 @@ public class EmailActivity extends AppCompatActivity {
 
     public void back(View view) {
         Intent intent = new Intent(EmailActivity.this, LogInActivity.class);
-        startActivity(intent);
+        startActivity(intent);// переход к классу проверки почты 11.04.2023 Лазарев А.В.
     }
 }

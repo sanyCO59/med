@@ -28,11 +28,11 @@ public class PasswordActivity extends AppCompatActivity {
         but0 = findViewById(R.id.but0);
         but0.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
+            public void onClick(View view) {//обработка нажатия кнопки 11.04.2023 Лазарев А.В.
                 but0.setBackgroundResource(R.drawable.ellipse_big_blue);
                 but0.setTextColor(Color.parseColor("#FFFFFF"));
                 counter(true);
-                handler.postDelayed(new Runnable() {
+                handler.postDelayed(new Runnable() {// задержка при нажатии кнопки 11.04.2023 Лазарев А.В.
                     @Override
                     public void run() {
                         but0.setBackgroundResource(R.drawable.ellipse_big_grey);
@@ -196,7 +196,7 @@ public class PasswordActivity extends AppCompatActivity {
 
     }
 
-    private void counter(boolean i) {
+    private void counter(boolean i) {//Работа с сотоянием индикатора заполнения пароля 11.04.2023 Лазарев А.В.
         if (i) {
             if (count != 4) {
                 count++;
@@ -230,13 +230,13 @@ public class PasswordActivity extends AppCompatActivity {
                 break;
             case 4:
                 Intent intent = new Intent(PasswordActivity.this, MakeCardActivity.class);
-                startActivity(intent);
+                startActivity(intent);// переход к классу ссоздания карты 11.04.2023 Лазарев А.В.
                 break;
         }
     }
 
     public void skip(View view) {
         Intent intent = new Intent(PasswordActivity.this, AnalizActivity.class);
-        startActivity(intent);
+        startActivity(intent);// переход к классу главной страницы 11.04.2023 Лазарев А.В.
     }
 }

@@ -37,7 +37,7 @@ public class LogInActivity extends AppCompatActivity {
             }
 
             @Override
-            public void afterTextChanged(Editable editable) {
+            public void afterTextChanged(Editable editable) {//изменение состояния кнопки 11.04.2023 Лазарев А.В.
                 if (email.length() == 0) {
                     button.setEnabled(false);
                     button.setBackgroundResource(R.drawable.button2);
