@@ -28,9 +28,8 @@ TextView text1, text2, text3;
         Circles(1);
         scroll.setOnScrollChangeListener(new View.OnScrollChangeListener() {
             @Override
-            public void onScrollChange(View view, int i, int i1, int i2, int i3) {
+            public void onScrollChange(View view, int i, int i1, int i2, int i3) {//проверка положения HorizontalScrollView
                 int position = (int) scroll.getScrollX();
-                System.out.println(position);
                 if(position <= 0){
                     Circles(1);
                 }else if(position >= 2000){
@@ -41,7 +40,7 @@ TextView text1, text2, text3;
             }
         });
     }
-    public void Circles(int i){
+    public void Circles(int i){//метод замены текста при изменении положения HorizontalScrollView
         img1.setBackgroundResource(R.drawable.ellipse_0);
         img2.setBackgroundResource(R.drawable.ellipse_0);
         img3.setBackgroundResource(R.drawable.ellipse_0);
