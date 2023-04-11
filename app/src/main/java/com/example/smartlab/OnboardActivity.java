@@ -63,7 +63,7 @@ public class OnboardActivity extends AppCompatActivity {
                 img3.setBackgroundResource(R.drawable.ellipse_1);
                 text1.setText(R.string.t2);
                 text2.setText(R.string.t5);
-                text3.setText(getString(R.string.t8));
+                text3.setText(R.string.t8);
                 break;
         }
     }
