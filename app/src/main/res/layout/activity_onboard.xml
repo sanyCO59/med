@@ -127,7 +127,7 @@
 
             <ImageView
                 android:id="@+id/imageView8"
-                android:layout_width="match_parent"
+                android:layout_width="377dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 app:srcCompat="@drawable/img2" />

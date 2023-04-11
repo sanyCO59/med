@@ -12,13 +12,13 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Handler handler = new Handler();
+        Handler handler = new Handler();// объявление объекта класса handler
         handler.postDelayed(new Runnable() {
             @Override
             public void run() {
-                Intent intent = new Intent(MainActivity.this, OnboardActivity.class);
+                Intent intent = new Intent(MainActivity.this, OnboardActivity.class);//переход к классу OnboardActivity
                 startActivity(intent);
             }
-        },1500);
+        },1500);//задержка метода
     }
 }
