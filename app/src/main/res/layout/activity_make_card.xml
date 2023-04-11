@@ -114,7 +114,7 @@
         android:background="@drawable/bg_input"
         android:ems="10"
         android:hint="Дата рождения"
-        android:inputType="date"
+        android:inputType="text"
         android:paddingHorizontal="14sp"
         android:text=""
         android:textColorHint="#939396" />
