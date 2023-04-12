@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SearchActivity">
+
+    <LinearLayout
+        android:id="@+id/tab1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:background="@drawable/fon_up"
+        android:orientation="horizontal"
+        android:paddingHorizontal="20sp"
+        android:paddingVertical="24sp">
+
+        <FrameLayout
+            android:layout_width="277dp"
+            android:layout_height="match_parent">
+
+            <EditText
+                android:id="@+id/search"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/bg_input"
+                android:drawableLeft="@drawable/search"
+                android:drawablePadding="8sp"
+                android:ems="10"
+                android:hint="Искать анализы"
+                android:inputType="text"
+                android:padding="14sp"
+                android:textColorHint="#939396"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/imageView17"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right|center_vertical"
+                android:layout_margin="14sp"
+                android:onClick="back"
+                app:srcCompat="@drawable/icons" />
+
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/textView12"
+            android:layout_width="93dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:fontFamily="@font/lato"
+            android:gravity="center"
+            android:onClick="back"
+            android:text="Отменить"
+            android:textColor="#1A6FEE" />
+
+    </LinearLayout>
+
+</FrameLayout>

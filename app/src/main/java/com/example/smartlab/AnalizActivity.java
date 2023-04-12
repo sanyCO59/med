@@ -13,13 +13,25 @@ import android.widget.EditText;
 import android.widget.FrameLayout;
 import android.widget.LinearLayout;
 
+
 public class AnalizActivity extends AppCompatActivity {
+    private FrameLayout tab2, tab3;
 
     @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_analiz);
+        EditText search = findViewById(R.id.search);
+        tab2 = findViewById(R.id.tab2);
+        tab3 = findViewById(R.id.tab3);
+        search.setOnFocusChangeListener(new View.OnFocusChangeListener() {
+            @Override
+            public void onFocusChange(View view, boolean b) {
+                Intent intent = new Intent(AnalizActivity.this, SearchActivity.class);
+                startActivity(intent);
+            }
+        });
 
     }
 
@@ -39,6 +51,22 @@ public class AnalizActivity extends AppCompatActivity {
     }
 
     public void open(View view) {
+        tab2.setVisibility(View.VISIBLE);
+        tab3.setVisibility(View.GONE);
+    }
 
+    public void korzina(View view) {
+        Intent intent = new Intent(AnalizActivity.this, KorzinaActivity.class);
+        startActivity(intent);
+    }
+
+    public void add(View view) {
+        tab2.setVisibility(View.GONE);
+        tab3.setVisibility(View.VISIBLE);
+    }
+
+
+    public void close(View view) {
+        tab2.setVisibility(View.GONE);
     }
 }
