@@ -456,8 +456,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="#80000000"
-        android:visibility="gone"
-        tools:visibility="visible">
+        android:visibility="gone">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -656,7 +655,7 @@
                 android:layout_height="wrap_content"
                 android:drawableLeft="@drawable/korzina"
                 android:gravity="right"
-                android:text="500 ₽"
+                android:text="690 ₽"
                 android:textColor="#FFFFFF"
                 android:textSize="17sp" />
         </FrameLayout>

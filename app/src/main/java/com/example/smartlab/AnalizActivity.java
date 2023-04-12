@@ -25,11 +25,11 @@ public class AnalizActivity extends AppCompatActivity {
         EditText search = findViewById(R.id.search);
         tab2 = findViewById(R.id.tab2);
         tab3 = findViewById(R.id.tab3);
-        search.setOnFocusChangeListener(new View.OnFocusChangeListener() {
+        search.setOnFocusChangeListener(new View.OnFocusChangeListener() {//Описание: обработчик фокуса на элементе строки поиска дата: 12.04.2023, автор: Лазарев А.В.
             @Override
             public void onFocusChange(View view, boolean b) {
                 Intent intent = new Intent(AnalizActivity.this, SearchActivity.class);
-                startActivity(intent);
+                startActivity(intent);//Описание: переход к "Страница поиска" дата: 12.04.2023, автор: Лазарев А.В.
             }
         });
 
@@ -50,23 +50,23 @@ public class AnalizActivity extends AppCompatActivity {
         startActivity(intent);//Описание: переход к классу "Профиль" дата: 12.04.2023, автор: Лазарев А.В.
     }
 
-    public void open(View view) {
+    public void open(View view) {//Описание: открытие модального окна дата: 12.04.2023, автор: Лазарев А.В.
         tab2.setVisibility(View.VISIBLE);
         tab3.setVisibility(View.GONE);
     }
 
-    public void korzina(View view) {
+    public void korzina(View view) {//Описание: переход к корзине дата: 12.04.2023, автор: Лазарев А.В.
         Intent intent = new Intent(AnalizActivity.this, KorzinaActivity.class);
         startActivity(intent);
     }
 
-    public void add(View view) {
+    public void add(View view) {//Описание: добавление в корзину дата: 12.04.2023, автор: Лазарев А.В.
         tab2.setVisibility(View.GONE);
         tab3.setVisibility(View.VISIBLE);
     }
 
 
-    public void close(View view) {
+    public void close(View view) {//Описание: закрытие модального окна дата: 12.04.2023, автор: Лазарев А.В.
         tab2.setVisibility(View.GONE);
     }
 }

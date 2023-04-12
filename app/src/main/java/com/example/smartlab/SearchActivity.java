@@ -23,7 +23,7 @@ public class SearchActivity extends AppCompatActivity {
         setContentView(R.layout.activity_search);
         img = findViewById(R.id.img);
         search = findViewById(R.id.search);
-        search.addTextChangedListener(new TextWatcher() {
+        search.addTextChangedListener(new TextWatcher() {//Описание: при заполнении поля появляется список услуг дата: 12.04.2023, автор: Лазарев А.В.
             @Override
             public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
 
@@ -48,6 +48,6 @@ public class SearchActivity extends AppCompatActivity {
 
     public void back(View view) {
         Intent intent = new Intent(SearchActivity.this, AnalizActivity.class);
-        startActivity(intent);
+        startActivity(intent);//Описание: переход на главную страницу дата: 12.04.2023, автор: Лазарев А.В.
     }
 }

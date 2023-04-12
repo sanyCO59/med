@@ -30,7 +30,7 @@ public class KorzinaActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-    public void del(View view) {
+    public void del(View view) {//Описание: удаление услуги из корзины дата: 12.04.2023, автор: Лазарев А.В.
         tab.setVisibility(View.GONE);
         counterText2.setText("0 ₽");
     }
@@ -43,7 +43,7 @@ public class KorzinaActivity extends AppCompatActivity {
         counter(false);
     }
 
-    public void counter(boolean i) {
+    public void counter(boolean i) {//Описание: счетчик кол-ва пациентов дата: 12.04.2023, автор: Лазарев А.В.
         if (i) {
             count++;
 
@@ -58,7 +58,7 @@ public class KorzinaActivity extends AppCompatActivity {
         counterText2.setText(counterText.getText());
     }
 
-    public void next(View view) {
+    public void next(View view) {//Описание: переход к оформлению заказа дата: 12.04.2023, автор: Лазарев А.В.
         Intent intent = new Intent(KorzinaActivity.this, OformlActivity.class);
         startActivity(intent);
     }
