@@ -6,25 +6,23 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
-public class AnalizActivity extends AppCompatActivity {
+public class ProfileActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_analiz);
+        setContentView(R.layout.activity_profile);
     }
-
-    public void support(View view) {
-        Intent intent = new Intent(AnalizActivity.this, SupportActivity.class);
+    public void analiz(View view) {
+        Intent intent = new Intent(ProfileActivity.this, AnalizActivity.class);
         startActivity(intent);
     }
     public void result(View view) {
-        Intent intent = new Intent(AnalizActivity.this, ResultActivity.class);
+        Intent intent = new Intent(ProfileActivity.this, ResultActivity.class);
         startActivity(intent);
     }
-    public void profile(View view) {
-        Intent intent = new Intent(AnalizActivity.this, ProfileActivity.class);
+    public void support(View view) {
+        Intent intent = new Intent(ProfileActivity.this, SupportActivity.class);
         startActivity(intent);
     }
-
 }
