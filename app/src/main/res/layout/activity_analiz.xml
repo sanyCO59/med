@@ -7,39 +7,42 @@
     tools:context=".AnalizActivity">
 
     <LinearLayout
+        android:id="@+id/tab1"
+        android:layout_width="match_parent"
+        android:layout_height="49dp"
+        android:layout_marginHorizontal="20sp"
+        android:layout_marginTop="24sp"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/search"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/bg_input"
+            android:drawableLeft="@drawable/search"
+            android:drawablePadding="8sp"
+            android:ems="10"
+            android:hint="Искать анализы"
+            android:inputType="text"
+            android:padding="14sp"
+            android:textColorHint="#939396"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
         android:id="@+id/tab"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_marginTop="58sp"
         android:gravity="center_horizontal"
         android:orientation="vertical"
+        android:rotation="0"
+        android:rotationX="0"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
-
-        <LinearLayout
-            android:id="@+id/tab1"
-            android:layout_width="match_parent"
-            android:layout_height="49dp"
-            android:layout_marginHorizontal="20sp"
-            android:layout_marginTop="24sp"
-            android:orientation="horizontal">
-
-            <EditText
-                android:id="@+id/editTextTextPersonName"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="@drawable/bg_input"
-                android:drawableLeft="@drawable/search"
-                android:drawablePadding="8sp"
-                android:ems="10"
-                android:hint="Искать анализы"
-                android:inputType="text"
-                android:padding="14sp"
-                android:textColorHint="#939396"
-                android:textSize="16sp" />
-
-        </LinearLayout>
 
         <TextView
             android:id="@+id/textView15"
@@ -258,6 +261,7 @@
                                 android:background="@drawable/small_button_blue"
                                 android:fontFamily="@font/lato_bold"
                                 android:gravity="center"
+                                android:onClick="open"
                                 android:text="Добавить"
                                 android:textColor="#FFFFFF" />
                         </FrameLayout>
@@ -325,6 +329,7 @@
                                 android:background="@drawable/small_button_blue"
                                 android:fontFamily="@font/lato_bold"
                                 android:gravity="center"
+                                android:onClick="open"
                                 android:text="Добавить"
                                 android:textColor="#FFFFFF" />
                         </FrameLayout>
@@ -443,5 +448,26 @@
         </LinearLayout>
 
     </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/tab2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#80000000"
+        android:visibility="gone">
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/tab3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="66sp"
+        android:background="#FFFFFF"
+        android:padding="24sp"
+        android:visibility="gone">
+
+    </FrameLayout>
 
 </FrameLayout>
