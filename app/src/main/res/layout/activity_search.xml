@@ -40,7 +40,10 @@
                 android:ems="10"
                 android:hint="Искать анализы"
                 android:inputType="text"
-                android:padding="14sp"
+                android:paddingLeft="14sp"
+                android:paddingTop="14sp"
+                android:paddingRight="30sp"
+                android:paddingBottom="14sp"
                 android:textColorHint="#939396"
                 android:textSize="16sp" />
 
