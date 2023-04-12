@@ -12,7 +12,8 @@ import android.widget.TextView;
 public class KorzinaActivity extends AppCompatActivity {
     LinearLayout tab;
     int count = 1;
-TextView person, counterText, counterText2;
+    TextView person, counterText, counterText2;
+
     @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,6 +32,7 @@ TextView person, counterText, counterText2;
 
     public void del(View view) {
         tab.setVisibility(View.GONE);
+        counterText2.setText("0 ₽");
     }
 
     public void plus(View view) {
@@ -42,17 +44,22 @@ TextView person, counterText, counterText2;
     }
 
     public void counter(boolean i) {
-        if(i){
+        if (i) {
             count++;
 
-        }else{
-            if(count !=1){
+        } else {
+            if (count != 1) {
                 count--;
             }
 
         }
-        person.setText(count+" пациент");
-        counterText.setText(count*690+" ₽");
+        person.setText(count + " пациент");
+        counterText.setText(count * 690 + " ₽");
         counterText2.setText(counterText.getText());
+    }
+
+    public void next(View view) {
+        Intent intent = new Intent(KorzinaActivity.this, OformlActivity.class);
+        startActivity(intent);
     }
 }

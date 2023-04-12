@@ -6,10 +6,20 @@
     android:layout_height="match_parent"
     tools:context=".SearchActivity">
 
+    <ImageView
+        android:id="@+id/img"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="bottom"
+        android:layout_marginHorizontal="20sp"
+        android:layout_marginTop="120sp"
+        android:visibility="gone"
+        app:srcCompat="@drawable/poisk" />
+
     <LinearLayout
         android:id="@+id/tab1"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="100sp"
 
         android:background="@drawable/fon_up"
         android:orientation="horizontal"

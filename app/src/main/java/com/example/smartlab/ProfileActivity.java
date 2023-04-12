@@ -34,4 +34,9 @@ public class ProfileActivity extends AppCompatActivity {
         Intent intent = new Intent(ProfileActivity.this, SupportActivity.class);
         startActivity(intent);
     }
+
+    public void photo(View view) {
+//        Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+//        startActivityForResult(intent, Integer.parseInt(CAMERA_SERVICE));
+    }
 }
