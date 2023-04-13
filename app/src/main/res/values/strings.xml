@@ -19,5 +19,13 @@
         <item>Тицкая Елена</item>
         <item>Петров Пётр</item>
     </string-array>
+    <string-array name="ar2">
+        <item>
+            Сегодня, 16 апреля
+        </item>
+        <item>
+            Завтра, 17 апреля
+        </item>
+    </string-array>
 
 </resources>

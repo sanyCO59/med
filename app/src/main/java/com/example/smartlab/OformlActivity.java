@@ -15,7 +15,7 @@ import android.widget.TextView;
 
 public class OformlActivity extends AppCompatActivity {
     private TextView pers1, pers2, ed1, ed2, button, but_add;
-    private FrameLayout tab;
+    private FrameLayout tab, tab2;
     boolean isPersB1, isPersB2, in1, in2, in3;
     private EditText input1, input2, input3;
 
@@ -36,7 +36,14 @@ public class OformlActivity extends AppCompatActivity {
         ed1 = findViewById(R.id.edit_1);
         ed2 = findViewById(R.id.edit_2);
         tab = findViewById(R.id.tab);
+        tab2 = findViewById(R.id.tab2);
         input1 = findViewById(R.id.edit1);
+        input1.setOnFocusChangeListener(new View.OnFocusChangeListener() {
+            @Override
+            public void onFocusChange(View view, boolean b) {
+
+            }
+        });
         input1.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
@@ -110,14 +117,14 @@ public class OformlActivity extends AppCompatActivity {
         pers1.setBackgroundResource(R.drawable.bg1);
         pers1.setTextColor(Color.parseColor("#FFFFFF"));
         isPersB1 = true;
-        swichPersonButton();
+        switchPersonButton();
     }
 
     public void res2(View view) {
         pers2.setBackgroundResource(R.drawable.bg1);
         pers2.setTextColor(Color.parseColor("#FFFFFF"));
         isPersB2 = true;
-        swichPersonButton();
+        switchPersonButton();
     }
 
     public void addPerson(View view) {
@@ -149,9 +156,13 @@ public class OformlActivity extends AppCompatActivity {
         Intent intent = new Intent(OformlActivity.this, LoadActivity.class);
         startActivity(intent);
     }
-    private void swichPersonButton(){
+    private void switchPersonButton(){
         but_add.setBackgroundResource(R.drawable.bg1);
         but_add.setEnabled(true);
+    }
+
+    public void dateClose(View view) {
+
     }
 }
 
