@@ -38,12 +38,7 @@ public class OformlActivity extends AppCompatActivity {
         tab = findViewById(R.id.tab);
         tab2 = findViewById(R.id.tab2);
         input1 = findViewById(R.id.edit1);
-        input1.setOnFocusChangeListener(new View.OnFocusChangeListener() {
-            @Override
-            public void onFocusChange(View view, boolean b) {
 
-            }
-        });
         input1.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
@@ -85,6 +80,12 @@ public class OformlActivity extends AppCompatActivity {
                     in2 = false;
                 }
                 checkInput();
+            }
+        });
+        input2.setOnFocusChangeListener(new View.OnFocusChangeListener() {
+            @Override
+            public void onFocusChange(View view, boolean b) {
+                tab2.setVisibility(View.VISIBLE);
             }
         });
         input3 = findViewById(R.id.edit4);
@@ -162,7 +163,12 @@ public class OformlActivity extends AppCompatActivity {
     }
 
     public void dateClose(View view) {
+tab2.setVisibility(View.GONE);
+input2.setText("Сегодня, 16 апреля");
+    }
 
+    public void close_date(View view) {
+        tab2.setVisibility(View.GONE);
     }
 }
 
