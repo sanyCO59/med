@@ -14,4 +14,10 @@
         <item>Мужской</item>
         <item>Женский</item>
     </string-array>
+    <string-array name="spin_of">
+        <item>Тицкий Эдуард</item>
+        <item>Тицкая Елена</item>
+        <item>Петров Пётр</item>
+    </string-array>
+
 </resources>
