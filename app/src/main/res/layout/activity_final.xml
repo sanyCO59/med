@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FinalActivity">
+
+    <LinearLayout
+        android:layout_width="349dp"
+        android:layout_height="416dp"
+        android:layout_gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/imageView25"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/img1" />
+
+        <TextView
+            android:id="@+id/textView53"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30sp"
+            android:fontFamily="@font/lato_bold"
+            android:gravity="center"
+            android:text="Ваш заказ успешно оплачен!"
+            android:textColor="#00B712"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/textView58"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10sp"
+            android:fontFamily="@font/lato"
+            android:gravity="center"
+            android:text="Вам осталось дождаться приезда медсестры и сдать анализы. До скорой встречи!"
+            android:textColor="#939396" />
+
+        <TextView
+            android:id="@+id/textView59"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8sp"
+            android:fontFamily="@font/lato"
+            android:gravity="center"
+            android:text="Не забудьте ознакомиться с правилами подготовки к сдаче анализов"
+            android:textColor="#1A6FEE" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textView40"
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
+        android:fontFamily="@font/lato_bold"
+        android:gravity="bottom|center_horizontal"
+        android:text="Оплата"
+        android:textColor="#000000"
+        android:textSize="20sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="178dp"
+        android:layout_gravity="bottom|center_horizontal"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textView60"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20sp"
+            android:background="@drawable/outline_bg"
+            android:fontFamily="@font/lato_bold"
+            android:gravity="center"
+            android:text="Чек покупки"
+            android:textColor="#1A6FEE "
+            android:textSize="17sp" />
+
+        <TextView
+            android:id="@+id/textView61"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20sp"
+            android:layout_marginBottom="20sp"
+            android:background="@drawable/button1"
+            android:fontFamily="@font/lato_bold"
+            android:gravity="center"
+            android:text="На главную"
+            android:textColor="#FFFFFF"
+            android:onClick="back_main"
+            android:textSize="17sp" />
+    </LinearLayout>
+</FrameLayout>

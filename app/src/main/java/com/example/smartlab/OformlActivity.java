@@ -3,6 +3,7 @@ package com.example.smartlab;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.text.Editable;
@@ -13,7 +14,7 @@ import android.widget.FrameLayout;
 import android.widget.TextView;
 
 public class OformlActivity extends AppCompatActivity {
-    private TextView pers1, pers2, ed1, ed2, button;
+    private TextView pers1, pers2, ed1, ed2, button, but_add;
     private FrameLayout tab;
     boolean isPersB1, isPersB2, in1, in2, in3;
     private EditText input1, input2, input3;
@@ -24,11 +25,12 @@ public class OformlActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_oforml);
-        button.setEnabled(false);
+        but_add = findViewById(R.id.textView56);
         in1 = false;
         in2 = false;
         in3 = false;
         button = findViewById(R.id.textView51);
+        button.setEnabled(false);
         pers1 = findViewById(R.id.person1);
         pers2 = findViewById(R.id.person2);
         ed1 = findViewById(R.id.edit_1);
@@ -108,12 +110,14 @@ public class OformlActivity extends AppCompatActivity {
         pers1.setBackgroundResource(R.drawable.bg1);
         pers1.setTextColor(Color.parseColor("#FFFFFF"));
         isPersB1 = true;
+        swichPersonButton();
     }
 
     public void res2(View view) {
         pers2.setBackgroundResource(R.drawable.bg1);
         pers2.setTextColor(Color.parseColor("#FFFFFF"));
         isPersB2 = true;
+        swichPersonButton();
     }
 
     public void addPerson(View view) {
@@ -139,6 +143,15 @@ public class OformlActivity extends AppCompatActivity {
 
     public void close(View view) {
         tab.setVisibility(View.GONE);
+    }
+
+    public void load(View view) {
+        Intent intent = new Intent(OformlActivity.this, LoadActivity.class);
+        startActivity(intent);
+    }
+    private void swichPersonButton(){
+        but_add.setBackgroundResource(R.drawable.bg1);
+        but_add.setEnabled(true);
     }
 }
 

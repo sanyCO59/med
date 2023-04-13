@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LoadActivity">
+
+    <LinearLayout
+        android:layout_width="235dp"
+        android:layout_height="201dp"
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/Circle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/ellipse_29" />
+
+        <TextView
+            android:id="@+id/textLoad"
+            android:layout_width="match_parent"
+            android:layout_height="37dp"
+            android:fontFamily="@font/lato"
+            android:gravity="center"
+            android:text="Связываемся с банком..."
+            android:textColor="#939396"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textView43"
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
+        android:fontFamily="@font/lato_bold"
+        android:gravity="bottom|center_horizontal"
+        android:text="Оплата"
+        android:textColor="#000000"
+        android:textSize="20sp" />
+</FrameLayout>
